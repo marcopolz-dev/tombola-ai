@@ -1,0 +1,12 @@
+# Datapizza-ai framework
+#
+datapizza-ai
+datapizza-ai-clients-openai
+datapizza-ai-clients-openai-like
+
+# Others
+python-dotenv
+PyYAML
+
+# UI
+streamlit

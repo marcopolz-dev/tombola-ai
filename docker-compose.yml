@@ -1,0 +1,18 @@
+name: ai-challenges
+
+services:
+
+  tombola-ai:
+    container_name: tombola-app
+    image: tombola-ai:latest
+    ports:
+      - "8501:8501" 
+    command: streamlit run app.py --server.address=0.0.0.0      
+    env_file:
+      - .env
+    environment:
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY} 
+      - PROVIDER=${PROVIDER}
+    volumes:
+      - ./app:/app
