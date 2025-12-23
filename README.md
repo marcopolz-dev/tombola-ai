@@ -18,8 +18,8 @@ Questo progetto, nella sua semplicità, è un un esempio di come trasformare sem
 I giocatori sono impersonati da Agenti AI che reagiscono ai numeri estratti e alle battute degli altri utilizzando come memoria condivisa gli ultimi messaggi della chat.
 
    Esempio: 
-
-      Se un giocatore dice "Che numero orribile", un altro potrebbe rispondere "Dai, magari il prossimo è fortunato!".
+   
+   Se un giocatore dice "_Che numero orribile_", un altro potrebbe rispondere "_Dai, magari il prossimo è fortunato!_".
 
 <br/>
 
@@ -39,7 +39,7 @@ I giocatori sono impersonati da Agenti AI che reagiscono ai numeri estratti e al
 **Modifica in Diretta**
 L'utente (umano) puo sperimentare per divertimento o affinare le capacità degli agenti giocatori di rispondere. Cliccando sull'icona ⚙️, può entrare nel prompt di sistema di un agente e cambiargli le istruzioni mentre gioca.
 
-      Far diventare il Grinch gentile? Si può fare.
+> Far diventare il Grinch gentile? Si può fare.
 
 <br/>
 
@@ -49,7 +49,7 @@ Oltre ai giocatori, ci sono altri due Agenti.
 
 - **Card Generator (Il Matematico)**: È l'esperto dei numeri. Prima che il gioco inizi, genera le cartelle per tutti i giocatori assicurandosi che siano valide e senza errori.
 
-      In generale ogni agente può utilizzare un modello AI differente in base alla sua natura.
+  > In generale ogni agente può utilizzare un modello AI differente in base alla sua natura.
 
 <br/>
 
@@ -188,7 +188,7 @@ ma non è indispensabile.
 ## 📸 Screenshots
 
 <details>
-<summary>👀 Espandi per vedere tutti gli screenshots</summary>
+<summary>Espandi per vedere tutti gli screenshots</summary>
 
 ### Preparazione 
 <img src="app/static/images/avvio.png" width="60%">
@@ -210,5 +210,6 @@ ma non è indispensabile.
 
 ### Modifica del ruolo impersonato dall'agente (player -> banco)
 <img src="app/static/images/doppio-ruolo.png" width="60%">
+
 
 </details>
