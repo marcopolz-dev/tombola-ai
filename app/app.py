@@ -46,7 +46,7 @@ def open_editor_agente(player_id, meta= None):
         st.markdown(f'<img src="data:image/png;base64,{img_b64}" class="banco-header-img">', unsafe_allow_html=True)
 
     with c_tit:
-        st.write(f"Stai modificando di: **{player.name}**")
+        st.write(f"Stai modificando : **{player.name}**")
         if player.is_banco:
             st.caption("⚠️ Attenzione: Modificare il Banco influenza tutto il gioco!")
 

@@ -70,6 +70,8 @@ class AgentsManager:
                         name = role_id,
                         client = AIEngine.get_client(model_name),
                         system_prompt=conf.get("sys_prompt", "Sei un agente esperto e collaborativo."),
+                        tools = [tool_estrai_banco] if role_id == "GameMaster" else [],
+                        planning_interval=conf.get("planning_interval", 0)
                     ) 
                     # Dizionario di agenti attivi
                     active_agents[role_id] = TombolaAgent(agent, conf)
@@ -106,7 +108,7 @@ class AgentsManager:
                 banco_trovato = False
                 if risposta_gm:
                     for player in players:
-                        # Controlliamo se il nome di QUESTO player è nella risposta dell'AI
+                        # Controlliamo se il nome del giocatore è nella risposta dell'AI
                         if player.name in risposta_gm:
                             player.meta['type'] = AgentTypes.BANCO
                             player.default_sys_prompt += game_config.ISTRUZIONI_RUOLO_BANCO
@@ -119,7 +121,7 @@ class AgentsManager:
                     print("⚠️ [Fallback] Scelta casuale algoritmica per il Banco.")
                     role_id = random.choice(name_of_canditates) 
                     player = active_agents.get(role_id)                    
-                    player.meta['type'] = AgentTypes.BANCO # player -> banco
+                    player.meta['type'] = AgentTypes.BANCO
                     player.default_sys_prompt += game_config.ISTRUZIONI_RUOLO_BANCO
                     player.agent.system_prompt = player.default_sys_prompt
                     print(f"✅ [AgentsManager] Fallback. Ruolo BANCO assegnato a: {player.name}")
